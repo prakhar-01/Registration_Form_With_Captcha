@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="registration">
+        <div class="registration_container">
+            <div class="registration_image">
+                <div class="overlay"></div>
+                <h1 class="title">Get <br /> In Touch <br /> With Us</h1>
+                <p class="site">Developed By : Prakhar Gupta</p>
+            </div>
+            <form action="" class="registration_form">
+                <h1 class="title">Create an account </h1>
+                <div class="row">
+                    <div class="col-sm-6 mb-4">
+                        <label for="firstName" class="form-label">
+                            First Name
+                        </label>
+                        <input type="text" name="firstName" id="firstName" class="form-control">
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <label for="lastName" class="form-label">
+                            Last Name
+                        </label>
+                        <input type="text" name="lastName" id="lastName" class="form-control" />
+                    </div>
+                    <div class="col-sm-12" class="mb-4">
+                        <label for="email" class="form-label">Email
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" />
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" />
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <label for="confirmpassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" />
+                    </div>
+                    <div class="col-sm-12 mb-4">
+                        <label for="gender" class="form-label w-100">Gender</label>
+
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="gender" id="male" class="form-check-input" />
+                            <label for="male" class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="gender" id="female" class="form-check-input" />
+                            <label for="female" class="form-check-label">Female</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mb-4">
+                        <div id="captcha" class="d-flex justify-content-center justify-content-sm-end">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <input type="submit" class="btn btn-dark w-100" value="Sign up" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=expicit" async defer></script>
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            grecaptcha.render('captcha', {
+                'sitekey':
+                    '6Le6ulEmAAAAADHIpvCCNnmFtfjIKi9yB9dQHSsy'
+            })
+        }
+    </script>
+</body>
+
+</html>
